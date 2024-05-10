@@ -6,7 +6,7 @@
 /*   By: smishos <smishos@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 10:37:01 by smishos           #+#    #+#             */
-/*   Updated: 2024/05/08 13:42:24 by smishos          ###   ########.fr       */
+/*   Updated: 2024/05/09 12:16:03 by smishos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,3 @@ void	*ft_calloc(size_t count, size_t size)
 		ft_memset(ptr, 0, total_size);
 	return (ptr);
 }
-
-
-

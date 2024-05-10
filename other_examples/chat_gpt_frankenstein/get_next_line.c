@@ -6,7 +6,7 @@
 /*   By: smishos <smishos@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 10:36:58 by smishos           #+#    #+#             */
-/*   Updated: 2024/05/08 13:52:33 by smishos          ###   ########.fr       */
+/*   Updated: 2024/05/09 12:29:26 by smishos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static char	*ft_strdup(const char *s)
 	}
 	return (new_str);
 }
+
 static char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	len1;
@@ -78,28 +79,24 @@ char	*get_next_line(int fd)
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 		if (bytes_read < 0)
-			return NULL; // Error condition
+			return (NULL);
 		else if (bytes_read == 0)
-			break; // End-of-file reached
+			break ;
 		buffer[bytes_read] = '\0';
 		remainder = ft_strjoin(remainder, buffer);
 	}
-	// Calculate the length of the line
 	size_t line_length = (newline_ptr) ? newline_ptr - remainder : ft_strlen(remainder);
-	// Allocate memory for the line (including the null terminator)
 	line = (char *)malloc((line_length + 1) * sizeof(char));
 	if (!line)
-		return NULL;
-	// Copy the line from remainder to line
+		return (NULL);
 	ft_memcpy(line, remainder, line_length);
-	line[line_length] = '\0'; // Null terminate the line
-	// Update remainder to point to the start of the next line (if any)
+	line[line_length] = '\0';
 	if (newline_ptr)
 		remainder = ft_strdup(newline_ptr + 1);
 	else
 	{
-		free(remainder); // No more lines, free remainder
+		free(remainder);
 		return (NULL);
 	}
-	return line;
+	return (line);
 }
