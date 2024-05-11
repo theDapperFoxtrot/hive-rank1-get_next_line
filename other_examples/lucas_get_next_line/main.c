@@ -7,7 +7,7 @@ int main() {
     char *line;
 
     // Open a file for reading
-    fd = open("./test_file.txt", O_RDONLY);
+    fd = open("./bible.txt", O_RDONLY);
     if (fd == -1) {
         perror("Error opening file");
         return 1;

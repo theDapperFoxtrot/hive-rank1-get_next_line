@@ -33,7 +33,6 @@ char	*ft_strdup(const char *src)
 	*(ft_strncpy(new, src, ft_strlen(src))) = 0;
 	return (new);
 }
-
 char	*gnl_join(char *s1, char *s2)
 {
 	char	*res;

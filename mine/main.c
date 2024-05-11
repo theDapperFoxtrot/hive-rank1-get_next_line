@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smishos <smishos@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/09 13:27:36 by smishos           #+#    #+#             */
-/*   Updated: 2024/05/10 13:52:12 by smishos          ###   ########.fr       */
+/*   Created: 2024/05/11 13:14:30 by smishos           #+#    #+#             */
+/*   Updated: 2024/05/11 15:58:05 by smishos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 #include <stdio.h>
 #include <fcntl.h>
 
+char	*get_next_line(int fd);
+
 int main()
 {
 	int fd;
     char *line;
 
     // Open a file for reading
-    fd = open("test_file.txt", O_RDONLY);
+    fd = open("bible.txt", O_RDONLY);
     if (fd == -1) {
         perror("Error opening file");
         return 1;
@@ -29,8 +31,7 @@ int main()
     // Call get_next_line in a loop to read lines from the file
     while ((line = get_next_line(fd)) != NULL)
     {
-        printf("%s\n", line);
-        free(line); // Free memory allocated by get_next_line
+        printf("%s", line);
     }
 
     // Close the file descriptor
