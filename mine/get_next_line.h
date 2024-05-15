@@ -6,7 +6,7 @@
 /*   By: smishos <smishos@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 13:21:56 by smishos           #+#    #+#             */
-/*   Updated: 2024/05/11 16:02:30 by smishos          ###   ########.fr       */
+/*   Updated: 2024/05/13 13:35:35 by smishos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ size_t	ft_strlen(const char *str);
 char	*ft_strdup(const char *src);
 char	*ft_join(char *s1, char *s2);
 char	*ft_strchr(const char *s, int c);
-size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_free_null(char **str);
 

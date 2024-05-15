@@ -6,7 +6,7 @@
 /*   By: smishos <smishos@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 13:21:41 by smishos           #+#    #+#             */
-/*   Updated: 2024/05/11 16:02:38 by smishos          ###   ########.fr       */
+/*   Updated: 2024/05/15 14:14:10 by smishos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char	*ft_strdup(const char *src)
 	*(ft_strncpy(new, src, ft_strlen(src))) = 0;
 	return (new);
 }
+
 char	*ft_join(char *s1, char *s2)
 {
 	char	*res;
